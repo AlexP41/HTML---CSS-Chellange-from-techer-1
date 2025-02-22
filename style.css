@@ -71,12 +71,17 @@ body {
 
 /* ---------     Call To Actions Section --------- */
 
+.section-wrapper {
+  background-color: #eeeeee; /* фон буде на всю ширину */
+}
 
 .section--cta {
   background-color: #eeeeee;
-  padding: 9.6rem 0;
-  
+  padding: 9.6rem 4.8rem;
+
 }
+
+
 
 .container {
   display: grid;
@@ -85,10 +90,8 @@ body {
   row-gap: 2.4rem;
   column-gap: 4.8rem;
   margin: 0 auto;
-  max-width: 1300rem;
+  max-width: 130rem;
   border-radius: 0%;
-  width: 100vw;
-  height: 100vh;
 }
 
 .container-description {
@@ -99,6 +102,7 @@ body {
   overflow: hidden;
   grid-row: 1 / -1;
   border-radius: 40px;
+  min-width: 60rem;
 }
 
 .heading-primary {
@@ -288,11 +292,13 @@ body {
   gap: 1.6rem;
   border-radius: 40px;
   overflow: hidden;
+  min-width: 36rem;
 }
 
 .employee-img {
-  width: 50%;
-  height: auto;
+  max-width: 50%;
+  max-height: auto;
+  object-fit: cover;
 }
 
 .employee-name {
@@ -356,7 +362,7 @@ body {
   width: 25%;
   padding-bottom: 25%;
   background-color: #eeeeee;
-  border-top-left-radius: 40px;
+  border-top-left-radius: 4rem;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -399,4 +405,14 @@ body {
 
 
 
-/* -------------------------------------- */
+/* -------------------------------------- */@media screen and (max-width: 60rem) { 
+  .container {
+    grid-template-columns: repeat(1, 1fr); 
+    margin: 2rem;
+}
+
+.section-wrapper {
+  background-attachment: #eeeeee;
+  width: 100rem;
+}
+}
